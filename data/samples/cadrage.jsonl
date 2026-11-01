@@ -1,0 +1,20 @@
+{"id": "cadrage-01", "entree": "azul", "references": ["ⴰⵣⵓⵍ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "conversion simple"}
+{"id": "cadrage-02", "entree": "أزول", "references": ["ⴰⵣⵓⵍ"], "variete": "?", "ecriture": "ara", "registre": "formel", "cas": "conversion arabe → Tifinagh"}
+{"id": "cadrage-03", "entree": "ⴰⵣⵓⵍ", "references": ["ⴰⵣⵓⵍ"], "variete": "?", "ecriture": "tfng", "registre": "formel", "cas": "entrée déjà normalisée"}
+{"id": "cadrage-04", "entree": "tanmmirt", "references": ["ⵜⴰⵏⵎⵎⵉⵔⵜ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "consonne géminée"}
+{"id": "cadrage-05", "entree": "تانمّيرت", "references": ["ⵜⴰⵏⵎⵎⵉⵔⵜ"], "variete": "?", "ecriture": "ara", "registre": "formel", "cas": "gémination en arabe (chadda)"}
+{"id": "cadrage-06", "entree": "tanmirt", "references": ["ⵜⴰⵏⵎⵉⵔⵜ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "variante orthographique"}
+{"id": "cadrage-07", "entree": "amazigh", "references": ["ⴰⵎⴰⵣⵉⵖ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "digramme gh = ⵖ"}
+{"id": "cadrage-08", "entree": "amaziɣ", "references": ["ⴰⵎⴰⵣⵉⵖ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "lettre spéciale ɣ = ⵖ"}
+{"id": "cadrage-09", "entree": "أمازيغ", "references": ["ⴰⵎⴰⵣⵉⵖ"], "variete": "?", "ecriture": "ara", "registre": "formel", "cas": "غ = ⵖ"}
+{"id": "cadrage-10", "entree": "tamazight", "references": ["ⵜⴰⵎⴰⵣⵉⵖⵜ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "circonfixe t…t, digramme gh"}
+{"id": "cadrage-11", "entree": "tifinagh", "references": ["ⵜⵉⴼⵉⵏⴰⵖ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "mot courant"}
+{"id": "cadrage-12", "entree": "tafukt", "references": ["ⵜⴰⴼⵓⴽⵜ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "mot courant (soleil)"}
+{"id": "cadrage-13", "entree": "تافوكت", "references": ["ⵜⴰⴼⵓⴽⵜ"], "variete": "?", "ecriture": "ara", "registre": "formel", "cas": "conversion arabe → Tifinagh"}
+{"id": "cadrage-14", "entree": "aman", "references": ["ⴰⵎⴰⵏ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "mot courant (eau)"}
+{"id": "cadrage-15", "entree": "argaz", "references": ["ⴰⵔⴳⴰⵣ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "mot courant (homme)"}
+{"id": "cadrage-16", "entree": "idlis", "references": ["ⵉⴷⵍⵉⵙ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "mot courant (livre)"}
+{"id": "cadrage-17", "entree": "tanmirt s waṭas", "references": ["ⵜⴰⵏⵎⵉⵔⵜ ⵙ ⵡⴰⵟⴰⵙ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "phrase, lettre emphatique ṭ"}
+{"id": "cadrage-18", "entree": "tanmirt s watas", "references": ["ⵜⴰⵏⵎⵉⵔⵜ ⵙ ⵡⴰⵟⴰⵙ"], "variete": "?", "ecriture": "lat", "registre": "informel", "cas": "point diacritique absent (t / ṭ)"}
+{"id": "cadrage-19", "entree": "azul fellawen", "references": ["ⴰⵣⵓⵍ ⴼⵍⵍⴰⵡⵏ"], "variete": "?", "ecriture": "lat", "registre": "formel", "cas": "phrase courte, schwa non écrit"}
+{"id": "cadrage-20", "entree": "ur ssnx", "references": ["ⵓⵔ ⵙⵙⵉⵏⴰⵅ"], "variete": "?", "ecriture": "lat", "registre": "informel", "cas": "écriture informelle, voyelles omises"}

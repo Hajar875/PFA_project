@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Données et modèles volumineux (versionnés à part, DVC ou empreintes)
+data/raw/*
+data/interim/*
+data/synthetic/*
+data/real/*
+models/*
+reports/*
+!**/.gitkeep
+!data/gold/README.md
+!data/real/pilote_modele.csv
+
+# Documents de travail
+~$*.docx

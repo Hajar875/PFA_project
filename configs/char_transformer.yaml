@@ -1,0 +1,29 @@
+# Modèle de contrôle M1 : Transformer caractère entraîné de zéro.
+
+output: models/char/char_transformer.pt
+seed: 13
+device: auto
+train:
+  - data/synthetic/synth_v1.jsonl
+  - data/real/train.jsonl
+dev: data/gold/dev.jsonl
+tag_dropout: 0.15
+max_len: 256
+max_dev: 300
+
+model:
+  d_model: 256
+  nhead: 4
+  num_encoder_layers: 4
+  num_decoder_layers: 4
+  dim_feedforward: 1024
+  dropout: 0.2
+
+training:
+  epochs: 30
+  batch_size: 64
+  learning_rate: 5.0e-4
+  warmup_steps: 4000
+  label_smoothing: 0.1
+  clip_norm: 1.0
+  patience: 5

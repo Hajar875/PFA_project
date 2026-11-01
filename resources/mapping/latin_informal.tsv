@@ -1,0 +1,36 @@
+# Graphies latines informelles → transcription latine canonique (IRCAM).
+# Colonnes : motif <TAB> remplacement <TAB> commentaire. Le motif le plus long est appliqué en premier.
+# Le texte est mis en minuscules avant application ; les chiffres ne sont remplacés qu'à l'intérieur d'un mot.
+# Toute modification doit être reportée dans resources/guide/decisions.md.
+gh	ɣ	digramme courant
+rh	ɣ	variante citée par le cadrage (à valider : peut aussi noter r + h)
+γ	ɣ	gamma grec saisi à la place de ɣ
+ġ	ɣ
+kh	x
+tch	c	affriquée (à valider dans le guide)
+ch	c
+sh	c
+š	c
+č	c
+th	t	spirantisation (tarifit), non notée par l'IRCAM
+dh	d	spirantisation (tarifit), non notée par l'IRCAM
+dj	j	affriquée tarifit (décision à prendre dans le guide)
+ǧ	j
+ž	j
+ou	u	graphie à la française
+o	u	l'amazigh n'a pas de o
+ô	u
+â	a
+à	a
+é	i	graphie à la française (à valider)
+è	e
+ê	e
+ε	ɛ	epsilon grec
+ʕ	ɛ
+ʿ	ɛ
+3	ɛ	chiffre-lettre (Arabizi)
+7	ḥ	chiffre-lettre (Arabizi)
+9	q	chiffre-lettre (Arabizi)
+5	x	chiffre-lettre (Arabizi)
+v	f
+p	b

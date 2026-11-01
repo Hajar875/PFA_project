@@ -1,0 +1,20 @@
+# Lexique d'exemple (mots du document de cadrage). Colonnes : forme Tifinagh <TAB> variété <TAB> fréquence.
+# Variété : rif, tzm, shi, ou * pour une forme commune. Les vrais lexiques se construisent avec
+# `tznorm build-lexicon` à partir des corpus IRCAM et des sorties validées.
+ⴰⵣⵓⵍ	*	50
+ⵜⴰⵏⵎⵎⵉⵔⵜ	*	30
+ⵜⴰⵏⵎⵉⵔⵜ	*	30
+ⴰⵎⴰⵣⵉⵖ	*	40
+ⵜⴰⵎⴰⵣⵉⵖⵜ	*	40
+ⵜⵉⴼⵉⵏⴰⵖ	*	20
+ⵜⴰⴼⵓⴽⵜ	*	10
+ⴰⵎⴰⵏ	*	20
+ⴰⵔⴳⴰⵣ	shi	15
+ⴰⵔⴳⴰⵣ	tzm	15
+ⴰⵔⵢⴰⵣ	rif	15
+ⵉⴷⵍⵉⵙ	*	10
+ⵙ	*	200
+ⵡⴰⵟⴰⵙ	*	25
+ⴼⵍⵍⴰⵡⵏ	*	20
+ⵓⵔ	*	150
+ⵙⵙⵉⵏⴰⵅ	*	5

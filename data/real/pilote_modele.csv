@@ -1,0 +1,4 @@
+id;source;variete;ecriture;registre;entree;reference;reference_latin_ircam;reference_alt;ambigu;alternance_codes;annotateur;remarque
+pilote-0001;facebook;shi;lat;informel;tanmirt s watas;ⵜⴰⵏⵎⵉⵔⵜ ⵙ ⵡⴰⵟⴰⵙ;;;non;non;A1;exemple : point diacritique absent
+pilote-0002;elicitation;rif;lat;informel;thanmirth;;tanmirt;;non;non;A1;exemple : référence saisie en latin IRCAM
+pilote-0003;youtube;tzm;ara;informel;أزول فلاون;ⴰⵣⵓⵍ ⴼⵍⵍⴰⵡⵏ;;;non;non;A1;exemple : gémination non notée en arabe

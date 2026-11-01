@@ -1,0 +1,26 @@
+# Configuration du pipeline d'inférence (M0 → M4).
+# Les chemins relatifs sont résolus depuis le répertoire courant, puis depuis la racine du dépôt.
+
+resources_dir: resources
+
+# Baseline à règles utilisée seule (sans modèle) ou comme repli : 0 = B0, 1 = B1, 2 = B2
+rules_level: 2
+lexicon:
+  - resources/lexicon/lexique_exemple.tsv
+charlm: null            # ex. models/charlm.pkl (tznorm train-lm)
+detector: null          # ex. models/detector.json (tznorm train-detector)
+
+model:
+  type: null            # byt5 | char | null (null = règles seules)
+  path: models/byt5/phaseB/final
+  device: auto          # auto | cpu | cuda
+  num_beams: 5
+  max_length: 512
+  batch_size: 16
+
+rerank:
+  enabled: true
+  weights: null         # ex. models/rerank.json (tznorm tune-rerank)
+
+fallback_rules: true
+protect_foreign_segments: true

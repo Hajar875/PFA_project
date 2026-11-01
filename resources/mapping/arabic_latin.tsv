@@ -1,0 +1,50 @@
+# Écriture arabe → transcription latine canonique (IRCAM).
+# و, ي, la chadda et le alif initial suivi de و sont traités dans le code (src/tznorm/rules/arabic.py),
+# car leur valeur dépend du contexte. Une cellule de remplacement vide supprime le caractère.
+ا	a
+أ	a
+إ	i
+آ	a
+ٱ	a
+ى	a
+ب	b
+پ	b
+ت	t
+ث	t
+ة	t
+ج	j
+ح	ḥ
+خ	x
+د	d
+ذ	d
+ر	r
+ز	z
+ژ	ẓ
+س	s
+ش	c
+ص	ṣ
+ض	ḍ
+ط	ṭ
+ظ	ḍ
+ع	ɛ
+غ	ɣ
+ف	f
+ڤ	f
+ق	q
+ك	k
+ڭ	g
+گ	g
+ل	l
+م	m
+ن	n
+ه	h
+ء
+ئ
+ؤ	u
+َ	a
+ِ	i
+ُ	u
+ْ
+ً
+ٌ
+ٍ

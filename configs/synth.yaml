@@ -1,0 +1,71 @@
+# Fabrique de données synthétiques : Tifinagh propre → translittération inverse → bruit calibré.
+
+seed: 13
+output: data/synthetic/synth_v1.jsonl
+
+# Sources propres en Tifinagh. Formats acceptés :
+#  - .jsonl avec un champ "texte" (et "variete" facultatif)
+#  - .txt, une phrase par ligne (la variété est alors celle indiquée ici)
+sources:
+  - path: data/interim/tifinagh_propre.jsonl
+    variete: "?"
+
+# Aucune phrase du Gold ne doit servir à générer des données (anti-fuite).
+gold_exclude:
+  - data/gold/dev.jsonl
+  - data/gold/test.jsonl
+
+variants_per_sentence: 6
+max_chars: 400
+placeholder_rate: 0.05   # part des paires où un ¤ (élément masqué) est ajouté des deux côtés
+
+scripts: {lat: 0.6, ara: 0.25, tfng: 0.15}
+conventions:
+  lat: {latin_ircam: 0.2, latin_social: 0.8}
+
+# Niveaux de bruit : 0 = propre, 3 = très bruité
+levels: {0: 0.15, 1: 0.35, 2: 0.35, 3: 0.15}
+level_factor: [0.0, 0.5, 1.0, 2.0]
+
+# Probabilités de base au niveau 2 (à remplacer par la sortie de `tznorm calibrate`)
+noise:
+  drop_vowel: 0.12
+  degeminate: 0.30
+  geminate: 0.03
+  insert_schwa: 0.15
+  repeat_char: 0.03
+  typo: 0.03
+  merge_particle: 0.10
+  capitalize: 0.10
+  drop_vowel_letter: 0.10
+  confuse_emphatic: 0.15
+
+# Graphies latines « réseaux sociaux » : lettre canonique → {variante: poids}
+latin_social:
+  ɣ: {gh: 0.75, ɣ: 0.10, rh: 0.10, g: 0.05}
+  x: {kh: 0.60, x: 0.35, "5": 0.05}
+  c: {ch: 0.65, sh: 0.25, c: 0.10}
+  ɛ: {"3": 0.45, ɛ: 0.20, a: 0.20, "": 0.15}
+  ḥ: {h: 0.60, "7": 0.30, ḥ: 0.10}
+  q: {q: 0.85, "9": 0.10, k: 0.05}
+  ṭ: {t: 0.85, ṭ: 0.10, T: 0.05}
+  ḍ: {d: 0.85, ḍ: 0.10, D: 0.05}
+  ṣ: {s: 0.85, ṣ: 0.10, S: 0.05}
+  ẓ: {z: 0.85, ẓ: 0.10, Z: 0.05}
+  ṛ: {r: 0.95, ṛ: 0.05}
+  u: {u: 0.75, ou: 0.25}
+  j: {j: 0.90, dj: 0.10}
+  ʷ: {w: 0.80, "": 0.20}
+
+# Particularités par variété (spirantisation notée th / dh en tarifit)
+variety_overrides:
+  rif:
+    t: {t: 0.6, th: 0.4}
+    d: {d: 0.7, dh: 0.3}
+
+arabic:
+  shadda: 0.4            # probabilité de noter la gémination par une chadda
+  letters:               # surcharges facultatives : lettre canonique → {lettre arabe: poids}
+    g: {ڭ: 0.6, گ: 0.25, ك: 0.15}
+    ḍ: {ض: 0.85, ظ: 0.15}
+    ẓ: {ز: 0.8, ژ: 0.2}

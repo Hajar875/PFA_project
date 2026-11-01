@@ -1,0 +1,39 @@
+# Modèle principal M2 : ByT5-small, phase A (synthétique) puis phase B (réel + rejeu).
+
+model_name: google/byt5-small
+output_dir: models/byt5
+seed: 13
+max_source_bytes: 512
+max_target_bytes: 512
+tag_dropout: 0.15          # part des exemples dont le jeton de variété / d'écriture devient "?"
+dev: data/gold/dev.jsonl   # sélection du point de contrôle (jamais le test)
+eval_beams: 1              # faisceau utilisé pendant l'évaluation en cours d'entraînement
+bf16: false                # true sur GPU Ampere ou plus récent ; jamais de fp16 avec T5
+report_to: none            # none | mlflow | wandb
+
+phaseA:
+  train:
+    - data/synthetic/synth_v1.jsonl
+  curriculum: [[0, 1], [0, 1, 2, 3]]   # niveaux de bruit autorisés à chaque étape
+  epochs_per_stage: [1, 2]
+  learning_rate: 5.0e-4
+  batch_size: 16
+  grad_accum: 2
+  warmup_ratio: 0.05
+  eval_steps: 2000
+  max_dev: 300
+
+phaseB:
+  init_from: models/byt5/phaseA/final
+  train_real:
+    - data/real/train.jsonl
+  replay_synthetic:
+    - data/synthetic/synth_v1.jsonl
+  replay_ratio: 0.25               # part de paires synthétiques dans le mélange final
+  oversample_min_fraction: 0.5     # chaque cellule variété × écriture atteint au moins 50 % de la plus grande
+  epochs: 10
+  learning_rate: 1.0e-4
+  batch_size: 16
+  grad_accum: 2
+  warmup_ratio: 0.05
+  eval_steps: 200

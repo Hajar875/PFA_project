@@ -1,0 +1,21 @@
+# Socle (règles, évaluation, données synthétiques)
+pyyaml>=6.0
+
+# Téléchargement des corpus (FLORES+, OLDI Seed)
+datasets>=2.18
+huggingface_hub>=0.20
+
+# Modèles neuronaux (ByT5, Transformer caractère)
+torch>=2.1
+transformers>=4.46
+accelerate>=0.26
+numpy>=1.24
+
+# API et démonstration
+fastapi>=0.110
+uvicorn>=0.29
+gradio>=4.0
+
+# Développement
+pytest>=8.0
+ruff>=0.4

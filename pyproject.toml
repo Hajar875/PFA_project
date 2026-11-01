@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tznorm"
+version = "0.1.0"
+description = "Normalisation neuronale du tamazight marocain multivariétal et multi-écriture vers le Tifinagh IRCAM"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+neural = ["torch>=2.1", "transformers>=4.46", "accelerate>=0.26", "numpy>=1.24"]
+data = ["datasets>=2.18", "huggingface_hub>=0.20"]
+api = ["fastapi>=0.110", "uvicorn>=0.29"]
+demo = ["gradio>=4.0"]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[project.scripts]
+tznorm = "tznorm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
